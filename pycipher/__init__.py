@@ -19,10 +19,11 @@ from pycipher.atbash import Atbash
 from pycipher.railfence import Railfence
 from pycipher.porta import Porta
 from pycipher.fracmorse import FracMorse
+from pycipher.hill import Hill
 import pycipher.util
 #from lorentz import Lorentz as Lorentz
 __all__=["Atbash","ADFGX","ADFGVX","SimpleSubstitution","Caesar","Affine","Enigma","Autokey","Beaufort",
          "Bifid","ColTrans","Gronsfeld","Foursquare","M209","PolybiusSquare","Playfair","Vigenere","Rot13","util",
-         "Railfence","Porta","FracMorse"]
+         "Railfence","Porta","FracMorse","Hill"]
 
 __version__ = "0.5.1"
