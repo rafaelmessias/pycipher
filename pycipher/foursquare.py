@@ -22,13 +22,13 @@ class Foursquare(Cipher):
         assert len(self.key2)==25, 'key2 is not length 25'
         
     def encipher_pair(self,a,b):
-        arow,acol = self.alph.index(a)/5, self.alph.index(a)%5
-        brow,bcol = self.alph.index(b)/5, self.alph.index(b)%5
+        arow,acol = self.alph.index(a)//5, self.alph.index(a)%5
+        brow,bcol = self.alph.index(b)//5, self.alph.index(b)%5
         return (self.key1[arow*5+bcol], self.key2[brow*5+acol])
         
     def decipher_pair(self,a,b):
-        arow,acol = self.key1.index(a)/5, self.key1.index(a)%5
-        brow,bcol = self.key2.index(b)/5, self.key2.index(b)%5
+        arow,acol = self.key1.index(a)//5, self.key1.index(a)%5
+        brow,bcol = self.key2.index(b)//5, self.key2.index(b)%5
         return (self.alph[arow*5+bcol], self.alph[brow*5+acol])
         
     def encipher(self,string):
